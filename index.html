@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lector de Noticias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header id="encabezado">
+    <div id="header-contenido">
+      <h1>📰 Lector de Noticias</h1>
+      <p id="subtitulo">Noticias en tiempo real · GNews</p>
+    </div>
+
+    <div id="controles">
+      <input type="text" id="buscador" placeholder="Buscar tema..." />
+      <button id="btn-buscar" onclick="buscarNoticias()">Buscar</button>
+      <button id="btn-refrescar" onclick="cargarNoticias()">↺ Refrescar</button>
+    </div>
+  </header>
+
+  <!-- CUERPO PRINCIPAL -->
+  <main id="principal">
+
+    <!-- ESTADO: cargando / error / vacío -->
+    <div id="estado">
+      <div id="spinner" class="oculto"></div>
+      <p id="mensaje-estado" class="oculto"></p>
+    </div>
+
+    <!-- ÁREA DE NOTICIAS -->
+    <section id="area-noticias">
+      <!-- Tarjetas generadas dinámicamente con JS -->
+    </section>
+
+  </main>
+
+  <footer id="pie">
+    Datos provistos por <a href="https://gnews.io" target="_blank">GNews</a> · ITZEL &amp; ARTURO · UNAQ · 2025
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
